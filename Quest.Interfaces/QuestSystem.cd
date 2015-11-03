@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QuestSystem.Model.Request.QuestRequest">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Request\QuestRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestSystem.Model.State.Quest">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEAAAAAAAAQAAAAAAgAAAAAAAAAAAgA=</HashCode>
+      <FileName>State\Quest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestSystem.Model.State.UserQuest">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACEAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>State\UserQuest.cs</FileName>
+      <NewMemberFileName>State\Quest.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="QuestSystem.Model.State.QuestStatus">
+    <Position X="7" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAAAAAAQAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>State\Quest.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

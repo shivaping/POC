@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+   <Section Name="UserQuestServiceActorServiceReplicatorConfig">
+      <Parameter Name="ReplicatorEndpoint" Value="UserQuestServiceActorServiceReplicatorEndpoint" />
+   </Section>
+   <Section Name="UserQuestServiceActorServiceReplicatorSecurityConfig">
+      <Parameter Name="CredentialType" Value="None" />
+   </Section>
+   <Section Name="UserQuestServiceActorServiceLocalStoreConfig">
+      <Parameter Name="MaxAsyncCommitDelayInMilliseconds" Value="100" />
+      <Parameter Name="MaxVerPages" Value="32768" />
+   </Section>
+   <Section Name="QuestServiceActorServiceReplicatorConfig">
+      <Parameter Name="ReplicatorEndpoint" Value="QuestServiceActorServiceReplicatorEndpoint" />
+   </Section>
+   <Section Name="QuestServiceActorServiceReplicatorSecurityConfig">
+      <Parameter Name="CredentialType" Value="None" />
+   </Section>
+   <Section Name="QuestServiceActorServiceLocalStoreConfig">
+      <Parameter Name="MaxAsyncCommitDelayInMilliseconds" Value="100" />
+      <Parameter Name="MaxVerPages" Value="32768" />
+   </Section>
+</Settings>

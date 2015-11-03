@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="StableQuestPOCType" ApplicationTypeVersion="1.0.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+   <Parameters>
+      <Parameter Name="UserQuestServiceActorService_PartitionCount" DefaultValue="9" />
+      <Parameter Name="UserQuestServiceActorService_MinReplicaSetSize" DefaultValue="2" />
+      <Parameter Name="UserQuestServiceActorService_TargetReplicaSetSize" DefaultValue="3" />
+      <Parameter Name="QuestServiceActorService_PartitionCount" DefaultValue="9" />
+      <Parameter Name="QuestServiceActorService_MinReplicaSetSize" DefaultValue="2" />
+      <Parameter Name="QuestServiceActorService_TargetReplicaSetSize" DefaultValue="3" />
+   </Parameters>
+   <ServiceManifestImport>
+      <ServiceManifestRef ServiceManifestName="QuestSytemPkg" ServiceManifestVersion="1.0.0.0" />
+   </ServiceManifestImport>
+   <DefaultServices>
+      <Service Name="UserQuestServiceActorService">
+         <StatefulService ServiceTypeName="UserQuestServiceActorServiceType" TargetReplicaSetSize="[UserQuestServiceActorService_TargetReplicaSetSize]" MinReplicaSetSize="[UserQuestServiceActorService_MinReplicaSetSize]">
+            <UniformInt64Partition PartitionCount="[UserQuestServiceActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+         </StatefulService>
+      </Service>
+      <Service Name="QuestServiceActorService">
+         <StatefulService ServiceTypeName="QuestServiceActorServiceType" TargetReplicaSetSize="[QuestServiceActorService_TargetReplicaSetSize]" MinReplicaSetSize="[QuestServiceActorService_MinReplicaSetSize]">
+            <UniformInt64Partition PartitionCount="[QuestServiceActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+         </StatefulService>
+      </Service>
+   </DefaultServices>
+</ApplicationManifest>
